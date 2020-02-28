@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'YoutubeController@index')->name('youtube.index');
+Route::post('/search', 'YoutubeController@search')->name('youtube.search');
+Route::get('/search', 'YoutubeController@redirect')->name('youtube.redirect');
